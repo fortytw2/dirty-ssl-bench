@@ -14,7 +14,7 @@ The Go binary is a simple Hello World HTTP server that needs to be recompiled to
 
 All tests here (not very scientific, for sure) were run on a quad core i7, if that is relevant.
 
-### Nginx Results
+### Nginx Results (nginx version: nginx/1.10.2 OpenSSL 1.0.2j  26 Sep 2016)
 
 ```
 fortytw2@fortytw2 ~ % echo "GET https://localhost:8081/" | vegeta attack -duration=30s -insecure | tee results.bin | vegeta report
@@ -30,7 +30,7 @@ Status Codes  [code:count]             200:1500
 Error Set:
 ```
 
-### Go Results
+### Go Results (go version go1.7.3 linux/amd64)
 
 ```
 fortytw2@fortytw2 ~ % echo "GET https://localhost:8080/" | vegeta attack -duration=30s -insecure | tee results.bin | vegeta report
